@@ -1,0 +1,22 @@
+table thead tr th {
+	font-family: 'brandingmedium';
+	background: #36304a;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	border: solid #fff 1px;
+}
+
+.casual {
+	font-family: 'brandingmedium';
+	text-align: center;
+}
+
+
+table td, table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    font-size: 15px;
+    font-weight: 300;
+}

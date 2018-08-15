@@ -144,6 +144,9 @@ $usrerarray = explode(',', $config["ids"]);
 <html>
 <head>
 	<title>Prueba R6</title>
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
@@ -162,13 +165,13 @@ $usrerarray = explode(',', $config["ids"]);
 	    </thead>
 	    <tbody>
 	      <tr>
-	        <td colspan="2">Casual</td>
-	        <td colspan="2">Casual</td>
-	        <td colspan="2">Casual</td>
-	        <td colspan="2">Casual</td>
-	        <td colspan="2">Casual</td>
-	        <td colspan="2">Casual</td>
-	        <td colspan="2">Casual</td>
+	        <td colspan="2" class="casual">Casual</td>
+	        <td colspan="2" class="casual">Casual</td>
+	        <td colspan="2" class="casual">Casual</td>
+	        <td colspan="2" class="casual">Casual</td>
+	        <td colspan="2" class="casual">Casual</td>
+	        <td colspan="2" class="casual">Casual</td>
+	        <td colspan="2" class="casual">Casual</td>
 	      </tr>
 	      <tr>
 	      	<?php
