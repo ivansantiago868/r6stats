@@ -157,124 +157,188 @@ $usrerarray = explode(',', $config["ids"]);
 	    <thead>
 	      <tr>
 	      	<?php
+	      		echo "<th></th>";
 	      		foreach ($usrerarray as $key) {
-	      			echo "<th colspan='2'>".$usertotal[$key]["nickname"]."</th>";
+	      			echo "<th>".$usertotal[$key]["nickname"]."</th>";
 	      		}
 	      	?>
 	      </tr>
 	    </thead>
 	    <tbody>
 	      <tr>
-	        <td colspan="2" class="casual">Casual</td>
-	        <td colspan="2" class="casual">Casual</td>
-	        <td colspan="2" class="casual">Casual</td>
-	        <td colspan="2" class="casual">Casual</td>
-	        <td colspan="2" class="casual">Casual</td>
-	        <td colspan="2" class="casual">Casual</td>
-	        <td colspan="2" class="casual">Casual</td>
+	      	<td></td>
+	        <td colspan='7' class="casual">Casual</td>
 	      </tr>
 	      <tr>
+	      	<td>casualpvp_matchwon</td>
 	      	<?php
+
 	      		foreach ($usrerarray as $key) {
-	      			echo "<th>casualpvp_matchwon</th>";
-	      			echo "<th>".$usertotal[$key]["casualpvp_matchwon"]."</th>";
+	      			if (isset($usertotal[$key]["casualpvp_matchwon"])) {
+	      				echo "<th>".$usertotal[$key]["casualpvp_matchwon"]."</th>";
+	      			}
+	      			else
+	      			{
+	      				echo "<th>N/A</th>";
+	      			}
 	      		}
 	      	?>
 	      </tr>
 	      <tr>
+	      	<td>casualpvp_matchlost</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
-	      			echo "<th>casualpvp_matchlost</th>";
-	      			echo "<th>".$usertotal[$key]["casualpvp_matchlost"]."</th>";
+	      			if (isset($usertotal[$key]["casualpvp_matchlost"])) {
+	      				echo "<th>".$usertotal[$key]["casualpvp_matchlost"]."</th>";
+	      			}
+	      			else
+	      			{
+	      				echo "<th>N/A</th>";
+	      			}
 	      		}
 	      	?>
 	      </tr>
 	      <tr>
+	      	<td>casualpvp_matchplayed</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
-	      			echo "<th>casualpvp_matchplayed</th>";
-	      			echo "<th>".$usertotal[$key]["casualpvp_matchplayed"]."</th>";
+	      			if (isset($usertotal[$key]["casualpvp_matchplayed"])) {
+	      				echo "<th>".$usertotal[$key]["casualpvp_matchplayed"]."</th>";
+	      			}
+	      			else
+	      			{
+	      				echo "<th>N/A</th>";
+	      			}
 	      		}
 	      	?>
 	      </tr>
 	      <tr>
+	      	<td>casualpvp_death</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
-	      			echo "<th>casualpvp_death</th>";
-	      			echo "<th>".$usertotal[$key]["casualpvp_death"]."</th>";
+	      			if (isset($usertotal[$key]["casualpvp_death"])) {
+	      				echo "<th>".$usertotal[$key]["casualpvp_death"]."</th>";
+	      			}
+	      			else
+	      			{
+	      				echo "<th>N/A</th>";
+	      			}
 	      		}
 	      	?>
 	      </tr>
 	      <tr>
+	      	<td>casualpvp_kills</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
-	      			echo "<th>casualpvp_kills</th>";
-	      			echo "<th>".$usertotal[$key]["casualpvp_kills"]."</th>";
+	      			if (isset($usertotal[$key]["casualpvp_kills"])) {
+	      				echo "<th>".$usertotal[$key]["casualpvp_kills"]."</th>";
+	      			}
+	      			else
+	      			{
+	      				echo "<th>N/A</th>";
+	      			}
 	      		}
 	      	?>
 	      </tr>
 	      <tr>
+	      	<td>casualpvp_timeplayed</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
-	      			echo "<th>casualpvp_timeplayed</th>";
-	      			echo "<th>".$usertotal[$key]["casualpvp_timeplayed"]."</th>";
+	      			if (isset($usertotal[$key]["casualpvp_timeplayed"])) {
+	      				echo "<th>".$usertotal[$key]["casualpvp_timeplayed"]."</th>";
+	      			}
+	      			else
+	      			{
+	      				echo "<th>N/A</th>";
+	      			}
 	      		}
 	      	?>
 	      </tr>
 	      <tr>
-	        <td colspan="2">Ranked</td>
-	        <td colspan="2">Ranked</td>
-	        <td colspan="2">Ranked</td>
-	        <td colspan="2">Ranked</td>
-	        <td colspan="2">Ranked</td>
-	        <td colspan="2">Ranked</td>
-	        <td colspan="2">Ranked</td>
+	      	<td></td>
+	        <td  colspan='7'>Ranked</td>
 	      </tr>
 	      <tr>
+	      	<td>rankedpvp_matchwon</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
-	      			echo "<th>rankedpvp_matchwon</th>";
-	      			echo "<th>".$usertotal[$key]["rankedpvp_matchwon"]."</th>";
+	      			if (isset($usertotal[$key]["rankedpvp_matchwon"])) {
+	      				echo "<th>".$usertotal[$key]["rankedpvp_matchwon"]."</th>";
+	      			}
+	      			else
+	      			{
+	      				echo "<th>N/A</th>";
+	      			}
 	      		}
 	      	?>
 	      </tr>
 	      <tr>
+	      	<td>rankedpvp_matchlost</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
-	      			echo "<th>rankedpvp_matchlost</th>";
-	      			echo "<th>".$usertotal[$key]["rankedpvp_matchlost"]."</th>";
+	      			if (isset($usertotal[$key]["rankedpvp_matchlost"])) {
+	      				echo "<th>".$usertotal[$key]["rankedpvp_matchlost"]."</th>";
+	      			}
+	      			else
+	      			{
+	      				echo "<th>N/A</th>";
+	      			}
 	      		}
 	      	?>
 	      </tr>
 	      <tr>
+	      	<td>rankedpvp_matchplayed</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
-	      			echo "<th>rankedpvp_matchplayed</th>";
-	      			echo "<th>".$usertotal[$key]["rankedpvp_matchplayed"]."</th>";
+	      			if (isset($usertotal[$key]["rankedpvp_matchplayed"])) {
+	      				echo "<th>".$usertotal[$key]["rankedpvp_matchplayed"]."</th>";
+					}
+	      			else
+	      			{
+	      				echo "<th>N/A</th>";
+	      			}
 	      		}
 	      	?>
 	      </tr>
 	      <tr>
+	      	<td>rankedpvp_death</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
-	      			echo "<th>rankedpvp_death</th>";
-	      			echo "<th>".$usertotal[$key]["rankedpvp_death"]."</th>";
+	      			if (isset($usertotal[$key]["rankedpvp_death"])) {
+	      				echo "<th>".$usertotal[$key]["rankedpvp_death"]."</th>";
+	      			}
+	      			else
+	      			{
+	      				echo "<th>N/A</th>";
+	      			}
 	      		}
 	      	?>
 	      </tr>
 	      <tr>
+	      	<td>rankedpvp_kills</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
-	      			echo "<th>rankedpvp_kills</th>";
-	      			echo "<th>".$usertotal[$key]["rankedpvp_kills"]."</th>";
+	      			if (isset($usertotal[$key]["rankedpvp_kills"])) {
+	      				echo "<th>".$usertotal[$key]["rankedpvp_kills"]."</th>";
+	      			}
+	      			else
+	      			{
+	      				echo "<th>N/A</th>";
+	      			}
 	      		}
 	      	?>
 	      </tr>
 	      <tr>
+	      	<td>rankedpvp_timeplayed</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
-	      			echo "<th>rankedpvp_timeplayed</th>";
-	      			echo "<th>".$usertotal[$key]["rankedpvp_timeplayed"]."</th>";
+	      			if (isset($usertotal[$key]["rankedpvp_timeplayed"])) {
+	      				echo "<th>".$usertotal[$key]["rankedpvp_timeplayed"]."</th>";
+	      			}
+	      			else
+	      			{
+	      				echo "<th>N/A</th>";
+	      			}
 	      		}
 	      	?>
 	      </tr>
