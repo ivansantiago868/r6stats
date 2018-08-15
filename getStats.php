@@ -170,7 +170,21 @@ $usrerarray = explode(',', $config["ids"]);
 	        <td colspan='7' class="casual">Casual</td>
 	      </tr>
 	      <tr>
-	      	<td>casualpvp_matchwon</td>
+	      	<td>Jugadas</td>
+	      	<?php
+	      		foreach ($usrerarray as $key) {
+	      			if (isset($usertotal[$key]["casualpvp_matchplayed"])) {
+	      				echo "<th>".$usertotal[$key]["casualpvp_matchplayed"]."</th>";
+	      			}
+	      			else
+	      			{
+	      				echo "<th>N/A</th>";
+	      			}
+	      		}
+	      	?>
+	      </tr>
+	      <tr>
+	      	<td>Ganadas</td>
 	      	<?php
 
 	      		foreach ($usrerarray as $key) {
@@ -185,7 +199,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>casualpvp_matchlost</td>
+	      	<td>Perdidas</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["casualpvp_matchlost"])) {
@@ -199,11 +213,12 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>casualpvp_matchplayed</td>
+	      	<td>Wins Rate</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
-	      			if (isset($usertotal[$key]["casualpvp_matchplayed"])) {
-	      				echo "<th>".$usertotal[$key]["casualpvp_matchplayed"]."</th>";
+	      			if (isset($usertotal[$key]["casualpvp_matchplayed"]) and isset($usertotal[$key]["casualpvp_matchwon"]) and isset($usertotal[$key]["casualpvp_matchlost"])) {
+	      				$calculo = (100/$usertotal[$key]["casualpvp_matchplayed"])*$usertotal[$key]["casualpvp_matchwon"];
+	      				echo "<th>".number_format($calculo, 2, '.', '')."%</th>";
 	      			}
 	      			else
 	      			{
@@ -213,7 +228,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>casualpvp_death</td>
+	      	<td>Death</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["casualpvp_death"])) {
@@ -227,7 +242,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>casualpvp_kills</td>
+	      	<td>Kills</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["casualpvp_kills"])) {
@@ -241,7 +256,22 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>casualpvp_timeplayed</td>
+	      	<td>K/D Rate</td>
+	      	<?php
+	      		foreach ($usrerarray as $key) {
+	      			if (isset($usertotal[$key]["casualpvp_kills"]) and isset($usertotal[$key]["casualpvp_death"])) {
+	      				$calculo = $usertotal[$key]["casualpvp_kills"]/$usertotal[$key]["casualpvp_death"];
+	      				echo "<th>".number_format($calculo, 2, '.', '')."%</th>";
+	      			}
+	      			else
+	      			{
+	      				echo "<th>N/A</th>";
+	      			}
+	      		}
+	      	?>
+	      </tr>
+	      <tr>
+	      	<td>Tiempo Jugado</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["casualpvp_timeplayed"])) {
@@ -256,38 +286,10 @@ $usrerarray = explode(',', $config["ids"]);
 	      </tr>
 	      <tr>
 	      	<td></td>
-	        <td  colspan='7'>Ranked</td>
+	        <td  colspan='7'  class="casual">Ranked</td>
 	      </tr>
 	      <tr>
-	      	<td>rankedpvp_matchwon</td>
-	      	<?php
-	      		foreach ($usrerarray as $key) {
-	      			if (isset($usertotal[$key]["rankedpvp_matchwon"])) {
-	      				echo "<th>".$usertotal[$key]["rankedpvp_matchwon"]."</th>";
-	      			}
-	      			else
-	      			{
-	      				echo "<th>N/A</th>";
-	      			}
-	      		}
-	      	?>
-	      </tr>
-	      <tr>
-	      	<td>rankedpvp_matchlost</td>
-	      	<?php
-	      		foreach ($usrerarray as $key) {
-	      			if (isset($usertotal[$key]["rankedpvp_matchlost"])) {
-	      				echo "<th>".$usertotal[$key]["rankedpvp_matchlost"]."</th>";
-	      			}
-	      			else
-	      			{
-	      				echo "<th>N/A</th>";
-	      			}
-	      		}
-	      	?>
-	      </tr>
-	      <tr>
-	      	<td>rankedpvp_matchplayed</td>
+	      	<td>Jugadas</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["rankedpvp_matchplayed"])) {
@@ -301,7 +303,50 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>rankedpvp_death</td>
+	      	<td>Ganadas</td>
+	      	<?php
+	      		foreach ($usrerarray as $key) {
+	      			if (isset($usertotal[$key]["rankedpvp_matchwon"])) {
+	      				echo "<th>".$usertotal[$key]["rankedpvp_matchwon"]."</th>";
+	      			}
+	      			else
+	      			{
+	      				echo "<th>N/A</th>";
+	      			}
+	      		}
+	      	?>
+	      </tr>
+	      <tr>
+	      	<td>Perdidas</td>
+	      	<?php
+	      		foreach ($usrerarray as $key) {
+	      			if (isset($usertotal[$key]["rankedpvp_matchlost"])) {
+	      				echo "<th>".$usertotal[$key]["rankedpvp_matchlost"]."</th>";
+	      			}
+	      			else
+	      			{
+	      				echo "<th>N/A</th>";
+	      			}
+	      		}
+	      	?>
+	      </tr>
+	      <tr>
+	      	<td>Wins Rate</td>
+	      	<?php
+	      		foreach ($usrerarray as $key) {
+	      			if (isset($usertotal[$key]["rankedpvp_matchplayed"]) and isset($usertotal[$key]["rankedpvp_matchwon"]) and isset($usertotal[$key]["rankedpvp_matchlost"])) {
+	      				$calculo = (100/$usertotal[$key]["rankedpvp_matchplayed"])*$usertotal[$key]["rankedpvp_matchwon"];
+	      				echo "<th>".number_format($calculo, 2, '.', '')."%</th>";
+	      			}
+	      			else
+	      			{
+	      				echo "<th>N/A</th>";
+	      			}
+	      		}
+	      	?>
+	      </tr>
+	      <tr>
+	      	<td>Death</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["rankedpvp_death"])) {
@@ -315,7 +360,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>rankedpvp_kills</td>
+	      	<td>Kills</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["rankedpvp_kills"])) {
@@ -329,11 +374,26 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>rankedpvp_timeplayed</td>
+	      	<td>K/D Rate</td>
+	      	<?php
+	      		foreach ($usrerarray as $key) {
+	      			if (isset($usertotal[$key]["rankedpvp_kills"]) and isset($usertotal[$key]["rankedpvp_death"])) {
+	      				$calculo = $usertotal[$key]["rankedpvp_kills"]/$usertotal[$key]["rankedpvp_death"];
+	      				echo "<th>".number_format($calculo, 2, '.', '')."%</th>";
+	      			}
+	      			else
+	      			{
+	      				echo "<th>N/A</th>";
+	      			}
+	      		}
+	      	?>
+	      </tr>
+	      <tr>
+	      	<td>Tiempo Jugado</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["rankedpvp_timeplayed"])) {
-	      				echo "<th>".$usertotal[$key]["rankedpvp_timeplayed"]."</th>";
+	      				echo "<th>".gmdate("H:i:s", $usertotal[$key]["rankedpvp_timeplayed"])."</th>";
 	      			}
 	      			else
 	      			{
