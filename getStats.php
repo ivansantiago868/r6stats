@@ -151,8 +151,8 @@ $usrerarray = explode(',', $config["ids"]);
 </head>
 <body>
 	<div class="container-fluid">
-	  <h2>Striped Rows</h2>
-	  <p>The .table-striped class adds zebra-stripes to a table:</p>            
+		<img  class="img-logo" src="images/cucos-klan.png">
+	  <h2>Ranked CuCosKLAN</h2>          
 	  <table class="table table-striped">
 	    <thead>
 	      <tr>
@@ -170,7 +170,7 @@ $usrerarray = explode(',', $config["ids"]);
 	        <td colspan='7' class="casual">Casual</td>
 	      </tr>
 	      <tr>
-	      	<td>Jugadas</td>
+	      	<td class="t-info">Jugadas</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["casualpvp_matchplayed"])) {
@@ -184,7 +184,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>Ganadas</td>
+	      	<td class="t-info">Ganadas</td>
 	      	<?php
 
 	      		foreach ($usrerarray as $key) {
@@ -199,7 +199,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>Perdidas</td>
+	      	<td class="t-info">Perdidas</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["casualpvp_matchlost"])) {
@@ -213,7 +213,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>Wins Rate</td>
+	      	<td class="t-info">Wins Rate</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["casualpvp_matchplayed"]) and isset($usertotal[$key]["casualpvp_matchwon"]) and isset($usertotal[$key]["casualpvp_matchlost"])) {
@@ -228,7 +228,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>Death</td>
+	      	<td class="t-info">Death</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["casualpvp_death"])) {
@@ -242,7 +242,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>Kills</td>
+	      	<td class="t-info">Kills</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["casualpvp_kills"])) {
@@ -256,7 +256,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>K/D Rate</td>
+	      	<td class="t-info">K/D Rate</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["casualpvp_kills"]) and isset($usertotal[$key]["casualpvp_death"])) {
@@ -271,7 +271,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>Tiempo Jugado</td>
+	      	<td class="t-info">Tiempo Jugado</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["casualpvp_timeplayed"])) {
@@ -289,7 +289,7 @@ $usrerarray = explode(',', $config["ids"]);
 	        <td  colspan='7'  class="casual">Ranked</td>
 	      </tr>
 	      <tr>
-	      	<td>Jugadas</td>
+	      	<td class="t-info">Jugadas</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["rankedpvp_matchplayed"])) {
@@ -303,7 +303,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>Ganadas</td>
+	      	<td class="t-info">Ganadas</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["rankedpvp_matchwon"])) {
@@ -317,7 +317,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>Perdidas</td>
+	      	<td class="t-info">Perdidas</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["rankedpvp_matchlost"])) {
@@ -331,7 +331,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>Wins Rate</td>
+	      	<td class="t-info">Wins Rate</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["rankedpvp_matchplayed"]) and isset($usertotal[$key]["rankedpvp_matchwon"]) and isset($usertotal[$key]["rankedpvp_matchlost"])) {
@@ -346,7 +346,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>Death</td>
+	      	<td class="t-info">Death</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["rankedpvp_death"])) {
@@ -360,7 +360,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>Kills</td>
+	      	<td class="t-info">Kills</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["rankedpvp_kills"])) {
@@ -374,7 +374,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>K/D Rate</td>
+	      	<td class="t-info">K/D Rate</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["rankedpvp_kills"]) and isset($usertotal[$key]["rankedpvp_death"])) {
@@ -389,7 +389,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      	?>
 	      </tr>
 	      <tr>
-	      	<td>Tiempo Jugado</td>
+	      	<td class="t-info">Tiempo Jugado</td>
 	      	<?php
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["rankedpvp_timeplayed"])) {
