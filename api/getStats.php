@@ -158,7 +158,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      <tr>
 	      	<?php
 	      		echo "<th></th>";
-	      		foreach ($usrerarray as $key) { var_dump($usrerarray);
+	      		foreach ($usrerarray as $key) { var_dump($usertotal);
 	      			echo "<th>".$usertotal[$key]["nickname"]."</th>";
 	      		}
 	      	?>
