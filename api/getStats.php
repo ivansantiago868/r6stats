@@ -129,6 +129,7 @@ $final = array();
 foreach($idresponse["results"] as $value) {
 	$id = array_search ($value, $idresponse["results"]);
 	$final[$id] = array_merge($value, array("nickname"=>$data[$id]["nickname"], "profile_id" => $id, "platform" => $platform));
+	var_dump($final[$id]);
 }
 $datarespon =  str_replace(":infinite", "", json_encode(array("players" => array_merge($final,$notFound))));
 
@@ -138,7 +139,6 @@ $usertotal = $usuarios["players"];
 
 $usrerarray = explode(',', $config["ids"]);
 
-var_dump($usrerarray);
 
 ?>
 <!DOCTYPE html>
