@@ -152,7 +152,7 @@ $usrerarray = explode(',', $config["ids"]);
 <body>
 	<div class="container-fluid">
 		<img  class="img-logo" src="images/cucos-klan.png">
-	  <h2>Ranked CuCosKLAN</h2>          
+	  <h2>Ranked WACHES TEAM</h2>          
 	  <table class="table table-striped">
 	    <thead>
 	      <tr>
