@@ -129,7 +129,6 @@ $final = array();
 foreach($idresponse["results"] as $value) {
 	$id = array_search ($value, $idresponse["results"]);
 	$final[$id] = array_merge($value, array("nickname"=>$data[$id]["nickname"], "profile_id" => $id, "platform" => $platform));
-	var_dump($final[$id]);
 }
 $datarespon =  str_replace(":infinite", "", json_encode(array("players" => array_merge($final,$notFound))));
 
@@ -159,7 +158,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      <tr>
 	      	<?php
 	      		echo "<th></th>";
-	      		foreach ($usrerarray as $key) { 
+	      		foreach ($usrerarray as $key) {
 	      			echo "<th>".$usertotal[$key]["nickname"]."</th>";
 	      		}
 	      	?>
@@ -395,20 +394,6 @@ $usrerarray = explode(',', $config["ids"]);
 	      		foreach ($usrerarray as $key) {
 	      			if (isset($usertotal[$key]["rankedpvp_timeplayed"])) {
 	      				echo "<th>".gmdate("H:i:s", $usertotal[$key]["rankedpvp_timeplayed"])."</th>";
-	      			}
-	      			else
-	      			{
-	      				echo "<th>N/A</th>";
-	      			}
-	      		}
-	      	?>
-	      </tr>
-	       <tr>
-	      	<td class="t-info">Kills</td>
-	      	<?php
-	      		foreach ($usrerarray as $key) {
-	      			if (isset($usertotal[$key]["gamemodeoperatorpvp_matchplayed"])) {
-	      				echo "<th>".$usertotal[$key]["gamemodeoperatorpvp_matchplayed"]."</th>";
 	      			}
 	      			else
 	      			{
