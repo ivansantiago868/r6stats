@@ -138,6 +138,7 @@ $usertotal = $usuarios["players"];
 
 $usrerarray = explode(',', $config["ids"]);
 
+var_dump($usrerarray);
 
 ?>
 <!DOCTYPE html>
@@ -158,7 +159,7 @@ $usrerarray = explode(',', $config["ids"]);
 	      <tr>
 	      	<?php
 	      		echo "<th></th>";
-	      		foreach ($usrerarray as $key) { var_dump($usertotal[$key]);
+	      		foreach ($usrerarray as $key) { 
 	      			echo "<th>".$usertotal[$key]["nickname"]."</th>";
 	      		}
 	      	?>
