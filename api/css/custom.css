@@ -1,10 +1,17 @@
 table thead tr th {
-	font-family: 'brandingmedium';
-	background: #36304a;
-	color: #fff;
-	text-transform: uppercase;
-	text-align: center;
-	border: solid #fff 1px;
+    font-family: 'brandingbold';
+    background: #bb510c;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    border: solid #fff 1px;
+        border-top-color: rgb(255, 255, 255);
+        border-top-style: solid;
+        border-top-width: 1px;
+        border-bottom-color: rgb(255, 255, 255);
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+    font-size: 17px;
 }
 
 .casual {

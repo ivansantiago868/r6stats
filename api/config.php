@@ -6,7 +6,7 @@ $config = array(
 	"ubi-email" => "ivansantiago868@me.com",
 	"ubi-password" => "Kivandy1920",
 	"default-region" => "emea", //Regions: emea - ncsa - apac 
-	"default-stats" => "rankedpvp_timeplayed,rankedpvp_matchlost,rankedpvp_death,rankedpvp_matchwon,rankedpvp_kills,rankedpvp_matchplayed,casualpvp_kills,casualpvp_matchlost,casualpvp_matchplayed,casualpvp_death,casualpvp_timeplayed,casualpvp_matchwon", 
+	"default-stats" => "rankedpvp_timeplayed,rankedpvp_matchlost,rankedpvp_death,rankedpvp_matchwon,rankedpvp_kills,rankedpvp_matchplayed,casualpvp_kills,casualpvp_matchlost,casualpvp_matchplayed,casualpvp_death,casualpvp_timeplayed,casualpvp_matchwon,gamemodeoperatorpvp_matchplayed", 
 	//All stats: https://gist.github.com/LaxisB/3924cfdc35562b719d1c891cdb895366
 	"default-platform" => "psn", //Platforms: uplay - xbl - psn
 	"default-progression" => "true",

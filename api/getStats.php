@@ -402,6 +402,20 @@ $usrerarray = explode(',', $config["ids"]);
 	      		}
 	      	?>
 	      </tr>
+	       <tr>
+	      	<td class="t-info">Kills</td>
+	      	<?php
+	      		foreach ($usrerarray as $key) {
+	      			if (isset($usertotal[$key]["gamemodeoperatorpvp_matchplayed"])) {
+	      				echo "<th>".$usertotal[$key]["gamemodeoperatorpvp_matchplayed"]."</th>";
+	      			}
+	      			else
+	      			{
+	      				echo "<th>N/A</th>";
+	      			}
+	      		}
+	      	?>
+	      </tr>
 	    </tbody>
 	  </table>
 	</div>
