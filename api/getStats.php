@@ -29,6 +29,7 @@ $uapi = new UbiAPI($config["ubi-email"],$config["ubi-password"]);
 
 $data = array();
 $stats = $config["default-stats"];
+dd($stats);
 $season = -1;
 
 if(isset($_GET['season'])) {
