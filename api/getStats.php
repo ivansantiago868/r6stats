@@ -150,7 +150,7 @@ $usrerarray = explode(',', $config["ids"]);
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container">
 		<img  class="img-logo" src="images/cucos-klan.png">
 	  <h2>Ranked WACHES TEAM</h2>          
 	  <table class="table table-striped">
